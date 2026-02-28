@@ -1,29 +1,26 @@
-import Navbar from "./components/navbar";
-import UploadSection from "./components/uploadsection";
-import SearchSection from "./components/searchsection";
-import AnswerCard from "./components/answercard";
-import OrganizerSection from "./components/organizersection";
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import UploadSection from "./components/UploadSection";
+import SearchSection from "./components/SearchSection";
+import AnswerCard from "./components/AnswerCard";
+import OrganizerSection from "./components/OrganizerSection";
 
 function App() {
   return (
     <div>
 
-      {/* Navbar */}
       <Navbar />
 
-      {/* Main Input Section */}
-      <div style={{ display: "flex", justifyContent: "space-around", padding: "40px" }}>
+      <div id="home" style={{ display: "flex", justifyContent: "space-around", padding: "40px" }}>
         <UploadSection />
         <SearchSection />
       </div>
 
-      {/* Answer Card Section */}
-      <div style={{ padding: "40px" }}>
+      <div id="answer" style={{ padding: "40px" }}>
         <AnswerCard />
       </div>
 
-      {/* Organizer Section */}
-      <div style={{ padding: "40px" }}>
+      <div id="organizer" style={{ padding: "40px" }}>
         <OrganizerSection />
       </div>
 

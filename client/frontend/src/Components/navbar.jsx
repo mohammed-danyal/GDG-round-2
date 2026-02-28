@@ -21,7 +21,6 @@ const styles = {
     color: "white",
     position: "sticky",
     top: 0,
-    zIndex: 1000,
   },
   logo: {
     fontSize: "20px",
@@ -34,7 +33,6 @@ const styles = {
   link: {
     color: "white",
     textDecoration: "none",
-    fontWeight: "500",
   }
 };
 
