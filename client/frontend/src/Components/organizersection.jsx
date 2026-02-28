@@ -1,20 +1,25 @@
 import PaperCard from "./PaperCard";
 
-function OrganizerSection() {
-
-  const papers = [
-    { title: "AI Research Paper", year: 2022 },
-    { title: "Machine Learning Study", year: 2021 }
-  ];
+function OrganizerSection({ papers }) {
 
   return (
     <div>
       <h2>Research Organizer</h2>
-      <div style={styles.grid}>
-        {papers.map((paper, index) => (
-          <PaperCard key={index} title={paper.title} year={paper.year} />
-        ))}
-      </div>
+
+      {papers.length === 0 ? (
+        <p>No papers saved yet.</p>
+      ) : (
+        <div style={styles.grid}>
+          {papers.map((paper, index) => (
+            <PaperCard
+              key={index}
+              title={paper.title}
+              year={paper.year}
+            />
+          ))}
+        </div>
+      )}
+
     </div>
   );
 }

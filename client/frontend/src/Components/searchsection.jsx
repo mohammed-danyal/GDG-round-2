@@ -1,9 +1,31 @@
-function SearchSection() {
+function SearchSection({ setCurrentPaper }) {
+
+  const handleSearch = () => {
+    // Fake data for now
+    const fakePaper = {
+      title: "Machine Learning Advances",
+      authors: "Andrew Ng, Yann LeCun",
+      year: 2023,
+      citations: 540,
+      summary: "This paper explores modern deep learning techniques."
+    };
+
+    setCurrentPaper(fakePaper);
+  };
+
   return (
     <div style={styles.box}>
       <h2>Search Research Paper</h2>
-      <input type="text" placeholder="Enter paper name..." style={styles.input} />
-      <button style={styles.button}>Search</button>
+
+      <input
+        type="text"
+        placeholder="Enter paper name..."
+        style={styles.input}
+      />
+
+      <button style={styles.button} onClick={handleSearch}>
+        Search
+      </button>
     </div>
   );
 }
